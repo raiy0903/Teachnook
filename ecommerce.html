@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        /* General Styles */
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+/* Header Styles */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+header {
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Nav Styles */
+nav {
+  padding: 10px 0;
+  background-color: #444;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Main Styles */
+main {
+  padding: 10px;
+}
+
+.hero {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 30%;
+  margin: 10px;
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.product img {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #444;
+  color: #fff;
+}
+#button-01{
+        color: azure;
+        background-color: black;
+        font-size: 30px;
+        border-radius: 10px;
+        /* padding-left: 10%; */
+        margin-left: 12%;
+    }
+    </style>
+  <head>
+    <title>E-Commerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>E-Commerce Site</h1>
+      </header>
+      <nav>
+        <ul>
+          
+          <li><a href="digital.html" target="_blank">Home</a></li>
+          <li><a href="https://plantcareforbeginners.com/basics">Plant-Care</a></li>
+          <li><a href="digital_about.html">About</a></li>
+        </ul>
+      </nav>
+      <main>
+        <div class="hero">
+          <h2>Welcome to our Plant Care</h2>
+        </div>
+        <section>
+          <h3>Our Products</h3>
+          <div class="product-list">
+            <div class="product">
+              <img src="product1.jpg" alt="Product 1" />
+              <h4>Product 1</h4>
+              <p>This is the description for product 1.</p>
+              <h5>Code-2233</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div>
+            <div class="product">
+              <img src="product2.jpg" alt="Product 2" />
+              <h4>Product 2</h4>
+              <p>This is the description for product 2.</p>
+              <h5>Code-2213</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div>
+            <div class="product">
+              <img src="product3.jpg" alt="Product 3" />
+              <h4>Product 3</h4>
+              <p>This is the description for product 3.</p>
+              <h5>Code-2273</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div>
+            <div class="product">
+              <img src="product4.jpg" alt="Product 4" />
+              <h4>Product 4</h4>
+              <p>This is the description for product 2.</p>
+              <h5>Code-2238</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div><div class="product">
+              <img src="product5.jpg" alt="Product 5" />
+              <h4>Product 5</h4>
+              <p>This is the description for product 5.</p>
+              <h5>Code-7233</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div>
+            <div class="product">
+              <img src="product6.jpg" alt="Product 6" />
+              <h4>Product 6</h4>
+              <p>This is the description for product 6.</p>
+              <h5>Code-2237</h5>
+              <!-- <li><a href="buy.html" rel="another" href="buy.hml" target="_blank">Buy Now</a></li> -->
+            </div>
+          </div>
+        </section>
+      </main>
+      <section id="section-02">
+        <a href="new.html" id="button-02">Buy Now</a>
+      </section>
+      <footer>
+        <p>®Copyright 2023</p>
+      </footer>
+    </div>
+    <script>
+      // server.js
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Serve static files (HTML, CSS, JS, images)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Define routes
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Handle API requests (placeholder example)
+app.get('/api/products', (req, res) => {
+  const products = [
+    { id: 1, name: 'Product 1', description: 'Description for product 1' },
+    { id: 2, name: 'Product 2', description: 'Description for product 2' },
+    { id: 3, name: 'Product 3', description: 'Description for product 3' },
+  ];
+  res.json(products);
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+    </script>
+  </body>
+</html>

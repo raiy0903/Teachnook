@@ -1,0 +1,12 @@
+CREATE DATABASE order_data;
+USE order_data;
+
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    whatsapp VARCHAR(15) NOT NULL,
+    alternate VARCHAR(15),
+    address TEXT NOT NULL,
+    payment_reference VARCHAR(255) NOT NULL
+);
